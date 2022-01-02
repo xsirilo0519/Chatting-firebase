@@ -44,15 +44,15 @@ export default class SignUp extends Component {
       <div className="container">
         <form className="mt-5 py-5 px-5" onSubmit={this.handleSubmit}>
           <h1>
-            Sign Up to
-            <Link className="title ml-2" to="/">
+            Registrarse a
+            <Link className="btn-link" to="/">
               Chatty
             </Link>
           </h1>
-          <p className="lead">Fill in the form below to create an account.</p>
-          <div className="form-group">
+          <p className="p-mensaje">Completa los campos para registrarte.</p>
+          <div >
             <input
-              className="form-control"
+              className="input-box"
               placeholder="Email"
               name="email"
               type="email"
@@ -60,9 +60,9 @@ export default class SignUp extends Component {
               value={this.state.email}
             ></input>
           </div>
-          <div className="form-group">
+          <div>
             <input
-              className="form-control"
+               className="input-box"
               placeholder="Password"
               name="password"
               onChange={this.handleChange}
@@ -74,8 +74,8 @@ export default class SignUp extends Component {
             {this.state.error ? (
               <p className="text-danger">{this.state.error}</p>
             ) : null}
-            <button className="btn btn-primary px-5" type="submit">
-              Sign up
+            <button className="btn-normal" type="submit">
+              Registrar
             </button>
           </div>
           <p>You can also sign up with any of these services</p>

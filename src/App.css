@@ -1,90 +1,38 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-
-header{
-  background-color: rgba(9,9,121,1) 4%,;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-body {
-  margin: 0;
-  padding: auto;
-  font-family: "Poppins", sans-serif;
-  background: rgb(9,9,121);
-  background: linear-gradient(180deg, rgba(9,9,121,1) 4%, rgba(0,212,255,1) 62%, rgba(255,255,255,1) 100%);
-  width: 100%;
-  min-height: calc(135vh - 227px);
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-h1{
-  font-size: 50px;
-  color: aliceblue;
-}
-.container__text-center-py-5{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.mt-4{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
-button{
-  width: 20%;
-  height: 50%;
-  background-color: rgba(255, 255, 255, 0.397);
-  border: none;
-  border-radius: 15px;
-  color: black;
-  cursor: pointer; font-weight: bold;
-  letter-spacing: 1px;
-  margin: 10px 0px;
-  letter-spacing: 1px;
+.btn-normal{
+  background-color: #B4432A;
+  border-radius: 10px;
+  border: black 2px solid;
+  padding: 5px;
+  width: auto;
+  font-size: 18px;
 }
 
-.navbar-nav{
-  color: white;
+.p-mensaje{
+  font-size: 18px;
+}
+
+.container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-link{
   text-decoration: none;
-  display: flex;
-  justify-content: space-around;
-}
-.navbar-brand .title_ml-2{
-  font-size: 40px;
-  color: aliceblue;
-}
-.nav-item_nav-link_mr-3{
-  color: white;
+  color: black;
+  background-color: #B4432A;
+  border-radius: 15px;
+  border: black 2px solid;
+  margin: 4px;
+  padding: 5px;
+  font-size: 17px;
 }
 
-.form-group{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
-.btn__btn-danger_mr-2{
-  width: 50%;
-}
-input{
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
-  border-radius: 35px;
-  color: white;
-  font-family: "Mulish", sans-serif;
-  font-size: 16px;
-  height: 35px;
-  padding: 0px 20px;
-  width: 70%;
-  outline: none;
+.input-box{
+  border-radius: 5px;
   margin: 5px;
 }
 
-.chat-area{
-  margin-top: 60px;
+.text-danger{
+  color: red;
 }
-

@@ -1,25 +1,27 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
-
+import "../Styles/HomeStyle.css"
 import { Link } from "react-router-dom";
+import { Fragment } from "react/cjs/react.production.min";
 
 export default class HomePage extends Component {
   render() {
     return (
-      <div className="home">
-        <Header />
+      <Fragment>
+          <Header />
+      <div className="container">
         <section>
           <div className="jumbotron__jumbotron-fluid-py-5">
             <div className="container__text-center-py-5">
-              <h1 className="display-4">Welcome to Chatty</h1>
+              <h1 className="display-4">Bienvenido a Chatty</h1>
               <p className="lead">
-                A great place to share your thoughts with friends
+                Un lugar para hablar
               </p>
-              <div className="mt-4">
-                <Link className="btn__btn-primary-px-5-mr-3" to="/signup">
+              <div className="container-btn">
+                <Link className="btn-link" to="/signup">
                   Create New Account
                 </Link>
-                <Link className="btn px-5" to="/login">
+                <Link className="btn-link"  to="/login">
                   Login to Your Account
                 </Link>
               </div>
@@ -27,6 +29,7 @@ export default class HomePage extends Component {
           </div>
         </section>
       </div>
+      </Fragment>
     );
   }
 }
