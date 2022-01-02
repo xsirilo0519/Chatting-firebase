@@ -1,5 +1,5 @@
 .btn-normal{
-  background-color: #B4432A;
+  background-color: #f4a261;
   border-radius: 10px;
   border: black 2px solid;
   padding: 5px;
@@ -20,7 +20,7 @@
 .btn-link{
   text-decoration: none;
   color: black;
-  background-color: #B4432A;
+  background-color: #e9c46a;
   border-radius: 15px;
   border: black 2px solid;
   margin: 4px;

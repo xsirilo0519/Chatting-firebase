@@ -19,10 +19,10 @@ export default class HomePage extends Component {
               </p>
               <div className="container-btn">
                 <Link className="btn-link" to="/signup">
-                  Create New Account
+                  Crear una cuenta
                 </Link>
                 <Link className="btn-link"  to="/login">
-                  Login to Your Account
+                  Ingresar a mi cuenta
                 </Link>
               </div>
             </div>

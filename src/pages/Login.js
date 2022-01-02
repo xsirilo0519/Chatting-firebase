@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Fragment } from "react/cjs/react.production.min";
+import Header from "../components/Header";
 import { signin, signInWithGoogle } from "../helpers/auth";
 import "../Styles/LoginStyle.css"
 
@@ -42,6 +44,8 @@ export default class Login extends Component {
 
   render() {
     return (
+      <Fragment>
+        <Header></Header>
       <div className="container">
         <form
           className="mt-5 py-5 px-5"
@@ -101,6 +105,7 @@ export default class Login extends Component {
           </p>
         </form>
       </div>
+      </Fragment>
     );
   }
 }

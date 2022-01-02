@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import { Fragment } from "react/cjs/react.production.min";
 import { signup, signInWithGoogle, signInWithGitHub } from "../helpers/auth";
 
 export default class SignUp extends Component {
@@ -41,6 +43,8 @@ export default class SignUp extends Component {
 
   render() {
     return (
+      <Fragment>
+      <Header></Header>
       <div className="container">
         <form className="mt-5 py-5 px-5" onSubmit={this.handleSubmit}>
           <h1>
@@ -78,22 +82,23 @@ export default class SignUp extends Component {
               Registrar
             </button>
           </div>
-          <p>You can also sign up with any of these services</p>
+          <p>Tu puedes entre por medio del servicio de google</p>
           <div className="form-group">
             <button
-              className="btn__btn-danger_mr-2"
+              className="btn-normal"
               type="button"
               onClick={this.googleSignIn}
             >
-              Sign up with Google
+              Ingresar con google
             </button>
           </div>
           <hr></hr>
           <p>
-            Already have an account? <Link to="/login">Login</Link>
+          ¿Ya tienes una cuenta? <Link className="btn-link" to="/login">Login</Link>
           </p>
         </form>
       </div>
+      </Fragment>
     );
   }
 }

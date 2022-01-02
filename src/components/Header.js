@@ -17,7 +17,7 @@ function Header() {
                 Perfil
               </Link>
               <button
-                className="btn-normal"
+                className="btn-link"
                 onClick={() => auth().signOut()}
               >
                 Logout

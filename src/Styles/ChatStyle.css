@@ -1,0 +1,22 @@
+.chat-bubble-current-user{
+background-color: #264653;
+width: 300px;
+border-radius: 10px;
+margin-left: 300px;
+}
+
+.chat-bubble-normal{
+background-color: #2a9d8f;
+border-radius: 10px;
+
+width: 300px;
+}
+
+.chat-container{
+    width: 650px;
+    height: 600px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+

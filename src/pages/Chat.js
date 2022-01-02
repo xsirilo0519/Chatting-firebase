@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { auth } from "../services/firebase";
 import { db } from "../services/firebase";
 import Header from "../components/Header";
+import "../Styles/ChatStyle.css"
 
 export default class Chat extends Component {
   constructor(props) {
@@ -75,34 +76,35 @@ export default class Chat extends Component {
     return (
       <div>
         <Header />
-        <div className="chat-area" ref={this.myRef}>
-          {/* loading indicator */}
+        <div className="container" ref={this.myRef}>
           {this.state.loadingChats ? (
-            <div className="spinner-border text-success" role="status">
-              <span className="sr-only">Loading...</span>
+            <div role="status">
+              <span >Loading...</span>
             </div>
           ) : (
             ""
           )}
-          {/* chat area */}
+          <div className="chat-container">
           {this.state.chats.map((chat) => {
             return (
               <p
                 key={chat.timestamp}
                 className={
-                  "chat-bubble " +
-                  (this.state.user.uid === chat.uid ? "current-user" : "")
+                  "chat-bubble-" +
+                  (this.state.user.uid === chat.uid ? "current-user" : "normal")
                 }
               >
                 {chat.content}
                 <br />
-                <span className="chat-time float-right">
+                <span>
                   {this.formatTime(chat.timestamp)}
                 </span>
               </p>
             );
           })}
+          </div>
         </div>
+        <div>
         <form onSubmit={this.handleSubmit} className="mx-3">
           <textarea
             className="form-control"
@@ -120,6 +122,7 @@ export default class Chat extends Component {
         <div className="py-5 mx-3">
           Login in as:{" "}
           <strong className="text-info">{this.state.user.email}</strong>
+        </div>
         </div>
       </div>
     );
