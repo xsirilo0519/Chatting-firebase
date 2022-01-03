@@ -3,15 +3,13 @@ import "firebase/compat/auth";
 import "firebase/compat/database";
 
 const config = {
-  "projectId": "chatty-c2e9d",
-  "appId": "1:344864761284:web:a9f9683b11517d4355b091",
-  "databaseURL": "https://chatty-c2e9d-default-rtdb.firebaseio.com/",
-  "storageBucket": "chatty-c2e9d.appspot.com",
-  "locationId": "us-central",
-  "apiKey": "AIzaSyAwOUlJi3H9zh-xJN1kJLclaoWAx_ZNjcQ",
-  "authDomain": "chatty-c2e9d.firebaseapp.com",
-  "messagingSenderId": "344864761284",
-  "measurementId": "G-T6XFYM668S"
+  apiKey: "AIzaSyCuMqQytS4QmA_oN3o43QRapTkENcR-t4c",
+  authDomain: "chatty-efe1e.firebaseapp.com",
+  databaseURL: "https://chatty-efe1e-default-rtdb.firebaseio.com",
+  projectId: "chatty-efe1e",
+  storageBucket: "chatty-efe1e.appspot.com",
+  messagingSenderId: "155558959380",
+  appId: "1:155558959380:web:00589798b0a3154cebca01",
 };
 firebase.initializeApp(config);
 export const auth = firebase.auth;

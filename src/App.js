@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import {
   Route,
   BrowserRouter as Router,
@@ -70,6 +70,7 @@ class App extends Component {
   }
 
   render() {
+
     return this.state.loading === true ? (
       <div className="spinner-border text-success" role="status">
         <span className="sr-only">Loading...</span>
@@ -95,6 +96,7 @@ class App extends Component {
           />
         </Switch>
       </Router>
+      
     );
   }
 }

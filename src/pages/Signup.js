@@ -5,8 +5,8 @@ import { Fragment } from "react/cjs/react.production.min";
 import { signup, signInWithGoogle, signInWithGitHub } from "../helpers/auth";
 
 export default class SignUp extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       error: null,
       email: "",
@@ -15,6 +15,7 @@ export default class SignUp extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.googleSignIn = this.googleSignIn.bind(this);
+    this.gitSignIn = this.gitSignIn.bind(this);
   }
 
   handleChange(event) {
@@ -36,6 +37,14 @@ export default class SignUp extends Component {
   async googleSignIn() {
     try {
       await signInWithGoogle();
+    } catch (error) {
+      this.setState({ error: error.message });
+    }
+  }
+
+  async gitSignIn() {
+    try {
+      await signInWithGitHub();
     } catch (error) {
       this.setState({ error: error.message });
     }
@@ -82,14 +91,22 @@ export default class SignUp extends Component {
               Registrar
             </button>
           </div>
-          <p>Tu puedes entre por medio del servicio de google</p>
-          <div className="form-group">
+          <div style={{margin:10}}>
             <button
               className="btn-normal"
               type="button"
               onClick={this.googleSignIn}
             >
-              Ingresar con google
+              Iniciar con google
+            </button>
+          </div>
+          <div style={{margin:10}}>
+            <button
+              className="btn-normal"
+              type="button"
+              onClick={this.gitSignIn}
+            >
+              Iniciar con GitHub
             </button>
           </div>
           <hr></hr>

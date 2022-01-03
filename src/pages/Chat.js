@@ -74,7 +74,7 @@ export default class Chat extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{textAlign:"center", justifyContent:"center"}}>
         <Header />
         <div className="container" ref={this.myRef}>
           {this.state.loadingChats ? (
@@ -107,7 +107,7 @@ export default class Chat extends Component {
         <div>
         <form onSubmit={this.handleSubmit} className="mx-3">
           <textarea
-            className="form-control"
+            className="txt-area"
             name="content"
             onChange={this.handleChange}
             value={this.state.content}
@@ -115,12 +115,14 @@ export default class Chat extends Component {
           {this.state.error ? (
             <p className="text-danger">{this.state.error}</p>
           ) : null}
-          <button type="submit" className="btn btn-submit px-5 mt-4">
-            Send
+          <div>
+          <button type="submit" className="btn-normal">
+            Enviar
           </button>
+          </div>
         </form>
         <div className="py-5 mx-3">
-          Login in as:{" "}
+          Ingresó con:{" "}
           <strong className="text-info">{this.state.user.email}</strong>
         </div>
         </div>

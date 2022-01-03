@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Fragment } from "react/cjs/react.production.min";
 import Header from "../components/Header";
-import { signin, signInWithGoogle } from "../helpers/auth";
+import { signin, signInWithGoogle, signInWithGitHub } from "../helpers/auth";
 import "../Styles/LoginStyle.css"
 
 export default class Login extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       error: null,
       email: "",
@@ -16,6 +16,7 @@ export default class Login extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.googleSignIn = this.googleSignIn.bind(this);
+    this.gitSignIn = this.gitSignIn.bind(this);
   }
 
   handleChange(event) {
@@ -34,6 +35,14 @@ export default class Login extends Component {
     }
   }
 
+  async gitSignIn() {
+    try {
+      await signInWithGitHub();
+    } catch (error) {
+      this.setState({error:error.message})  
+     }
+  }
+
   async googleSignIn() {
     try {
       await signInWithGoogle();
@@ -41,6 +50,7 @@ export default class Login extends Component {
       this.setState({ error: error.message });
     }
   }
+
 
   render() {
     return (
@@ -89,14 +99,22 @@ export default class Login extends Component {
               Login
             </button>
           </div>
-          <p>Puedes loguearte con Google</p>
-          <div className="form-group">
+          <div style={{margin:10}}>
           <button
             className="btn-normal"
             type="button"
             onClick={this.googleSignIn}
           >
             Iniciar con google
+          </button>
+          </div>
+          <div style={{margin:10}}>
+          <button
+            className="btn-normal"
+            type="button"
+            onClick={this.gitSignIn}
+          >
+            Iniciar con GitHub
           </button>
           </div>
           <hr />
